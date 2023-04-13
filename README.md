@@ -2,5 +2,5 @@
 ## what i used in this project:
 ### angular material
 ### bootstrap
-### fontawasome
+### fontawesome 
 ## the project divided into components with a shared module for shared pipes ,services and components
