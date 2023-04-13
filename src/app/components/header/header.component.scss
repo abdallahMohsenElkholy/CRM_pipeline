@@ -1,0 +1,164 @@
+.example-tab-icon {
+    margin-right: 8px;
+}
+
+$c1:#f399b7;
+$c2:#323639;
+$c3:#bbdefa;
+$c4:#bddfbf;
+$c5:#fdbcac;
+
+p ,.ng-star-inserted ,.nav-item a{
+    color: hsl(210, 28%, 72%);
+}
+
+div div h3{
+    color: #0c233e ;
+    font-size: 1.1rem;
+
+}
+
+.nav-item{
+    cursor: pointer;
+    &:hover a{
+        color: #0c233e !important;
+    }
+}
+
+.active a {
+    color: #0c233e ;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 600 !important;
+}
+
+.ch1{
+    &::before{
+        background-color: $c1;
+        top: 2px;
+        bottom: 7px;
+        left: -10px;
+        width: 5px;
+        position: absolute;
+        content: '';
+    }
+    position: relative;
+}
+.ch2{
+    &::before{
+        background-color: $c2;
+        top: 2px;
+        bottom: 7px;
+        left: -10px;
+        width: 5px;
+        position: absolute;
+        content: '';
+    }
+    position: relative;
+}
+.ch3{
+    &::before{
+        background-color: $c3;
+        top: 2px;
+        bottom: 7px;
+        left: -10px;
+        width: 5px;
+        position: absolute;
+        content: '';
+    }
+    position: relative;
+}
+.ch4{
+    &::before{
+        background-color: $c4;
+        top: 2px;
+        bottom: 7px;
+        left: -10px;
+        width: 5px;
+        position: absolute;
+        content: '';
+    }
+    position: relative;
+}
+.ch5{
+    &::before{
+        background-color: $c5;
+        top: 2px;
+        bottom: 7px;
+        left: -10px;
+        width: 5px;
+        position: absolute;
+        content: '';
+    }
+    position: relative;
+}
+
+.header{
+    display: flex;
+}
+
+.sec-header{
+    width: 50%;
+}
+
+.nav{
+    background-color: #f5f7fa;
+}
+
+.userImage{
+    background-image: url(../../../assets/img.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.dropdown-toggle{
+    display: inline-block;
+    padding: 16px 10px;
+}
+
+.dropdown-menu.show{
+    border: none ;
+    a{
+        color: #ced4da;
+        &:hover{
+            background-color: #f5f7f5;
+            color: #233ba3; 
+        }
+        
+    }
+}
+
+.dropdown-menu.show {
+box-shadow: -5px 5px 8px #eee;
+}
+
+@media screen and (max-width: 999px) {
+    .header{
+        display: block;
+    }
+
+    .sec-header{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .ch2,.ch3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    @for $i from 1 to 6{
+        .ch#{$i}{
+            display: none;
+        }
+    }
+
+    .header{
+        display: flex;
+    }
+}

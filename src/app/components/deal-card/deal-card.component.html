@@ -1,0 +1,59 @@
+<div class="deal-card" cdkDrag>
+    <div class="d-flex justify-content-between">
+        <p class="company-name my-0"
+        >{{data.company}}</p>
+        <span class="d-block">...</span>
+    </div>
+    <div>
+        <span class="badge position-relative bg-secondary me-2"
+        [matTooltip]="'state '+data.state"
+        matTooltipPosition="above"
+        matTooltipClass="tooltip"
+        >
+            {{data.state}}
+
+        </span>
+        <span *ngIf="accepted && title!='Getting Ready'" class="badge position-relative bg-primary"
+        [matTooltip]="'probability Status '+data.probability_status"
+        matTooltipPosition="above"
+        matTooltipClass="tooltip"
+        >
+            {{data.probability_status}}
+
+        </span>
+        <span *ngIf="!accepted" class="badge position-relative bg-danger ms-1"
+        [matTooltip]="'probability Status '+data.probability_status"
+        matTooltipPosition="above"
+        matTooltipClass="tooltip"
+        >
+           X
+        </span>
+    </div>
+    <div class="media-data">
+    <mat-icon>phone</mat-icon>
+        <span class="ms-1 me-2"
+        [matTooltip]="'The full name is '+data.first_name +' '+data.last_name+' and the phone number is '+data.phone"
+        matTooltipPosition="above"
+        matTooltipClass="tooltip"
+        >{{data.first_name}} {{data.last_name}}</span>
+        <span >{{data.phone | cutPhNum}}</span>
+    </div>
+    <div>
+        <i [class.text-danger]="!accepted" class="fa-solid fa-calendar"></i>
+        <span [class.text-danger]="!accepted" class="ms-1"
+        [matTooltip]="'the date of deal is '+data.date"
+        matTooltipPosition="above"
+        matTooltipClass="tooltip"
+        >
+            {{data.date |dateForm}} 
+            <span class="text-danger" *ngIf="!accepted">(past due)</span>
+        </span>
+    </div>
+    <div class="pb-2" *ngIf="title=='Getting Ready'">
+        <mat-progress-bar mode="determinate" [value]="data.probability_status.split('').slice(0,2).join('')"
+        [matTooltip]="'probability Status '+data.probability_status"
+        matTooltipPosition="above"
+        matTooltipClass="tooltip"
+        ></mat-progress-bar>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; overflow-x: hidden; background-color: #eee;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+    color: #6a798a;
+    font-weight: 500 !important;
+}
+
+h1,h2,h3,h5{
+    color: #0c233e;
+    font-weight: 600 !important;
+}
+
+.tooltip{
+    background-color: #081a2e;
+}

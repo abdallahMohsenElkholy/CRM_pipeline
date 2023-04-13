@@ -1,0 +1,47 @@
+<div class="row d-flex justify-content-between">
+    <div class="w-flex stage"
+    cdkDropList
+    #todoList1="cdkDropList"
+    [cdkDropListData]="data1"
+    [cdkDropListConnectedTo]="[todoList2,todoList3,todoList4,todoList5]"
+    (cdkDropListDropped)="drop($event)"
+    >
+        <app-stage-card [data]="data1" [title]="titles[0]"></app-stage-card>
+    </div>
+    <div class="w-flex stage"
+    cdkDropList
+    #todoList2="cdkDropList"
+    [cdkDropListData]="data2"
+    [cdkDropListConnectedTo]="[todoList1,todoList3,todoList4,todoList5]"
+    (cdkDropListDropped)="drop($event)"
+    >
+        <app-stage-card [data]="data2" [title]="titles[1]"></app-stage-card>
+    </div>
+    <div class="w-flex stage"
+    cdkDropList
+    #todoList3="cdkDropList"
+    [cdkDropListData]="data3"
+    [cdkDropListConnectedTo]="[todoList1,todoList2,todoList4,todoList5]"
+    (cdkDropListDropped)="drop($event)"
+    >
+        <app-stage-card [data]="data3" [title]="titles[2]"></app-stage-card>
+    </div>
+    <div class="w-flex stage"
+    cdkDropList
+    #todoList4="cdkDropList"
+    [cdkDropListData]="data4"
+    [cdkDropListConnectedTo]="[todoList1,todoList2,todoList3,todoList5]"
+    (cdkDropListDropped)="drop($event)"
+    >
+        <app-stage-card [data]="data4" [title]="titles[3]"></app-stage-card>
+    </div>
+    <div class="w-flex stage"
+    cdkDropList
+    #todoList5="cdkDropList"
+    [cdkDropListData]="data5"
+    [cdkDropListConnectedTo]="[todoList1,todoList2,todoList3,todoList4]"
+    (cdkDropListDropped)="drop($event)"
+    >
+        <app-stage-card [data]="data5" [title]="titles[4]"></app-stage-card>
+    </div>
+</div>

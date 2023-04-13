@@ -1,0 +1,21 @@
+<h3 class="my-0 ps-2">{{title}}</h3>
+<div class=" ps-2 d-flex justify-content-between mb-1"
+[matTooltip]="'Total '+title.toUpperCase()+' is '+ data.length +' Deals'"
+matTooltipPosition="above"
+matTooltipClass="tooltip"
+>
+    <div>
+        <mat-icon>assignment</mat-icon>
+        <span>{{data.length}}</span>
+    </div>
+    <div>
+        <mat-icon>fiber_pin</mat-icon>
+        <span>4242</span>
+    </div>
+    <div>
+        <i class="fa-solid fa-bell text-danger"></i>
+        <span class="text-danger">{{data|failed}}</span>
+    </div>
+    <div></div>
+</div>
+<app-deal-card *ngFor="let deal of data" [title]="title" [data]="deal"></app-deal-card>
